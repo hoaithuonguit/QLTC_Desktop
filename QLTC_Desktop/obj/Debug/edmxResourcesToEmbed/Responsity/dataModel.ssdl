@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTCDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ActionName">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ActionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MemoryAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ID_wallet" Type="int" Nullable="false" />
+    <Property Name="ID_action" Type="int" Nullable="false" />
+    <Property Name="Money" Type="int" Nullable="false" />
+    <Property Name="DateUse" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wallet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FirstMoney" Type="int" Nullable="false" />
+    <Property Name="Money" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QLTCDbModelStoreContainer">
+    <EntitySet Name="ActionName" EntityType="Self.ActionName" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemoryAction" EntityType="Self.MemoryAction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wallet" EntityType="Self.Wallet" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLTCDbModelStoreContainer" CdmEntityContainer="QLTCDbEntities">
+    <EntitySetMapping Name="ActionNames">
+      <EntityTypeMapping TypeName="QLTCDbModel.ActionName">
+        <MappingFragment StoreEntitySet="ActionName">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ActionName1" ColumnName="ActionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryActions">
+      <EntityTypeMapping TypeName="QLTCDbModel.MemoryAction">
+        <MappingFragment StoreEntitySet="MemoryAction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_wallet" ColumnName="ID_wallet" />
+          <ScalarProperty Name="ID_action" ColumnName="ID_action" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="DateUse" ColumnName="DateUse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wallets">
+      <EntityTypeMapping TypeName="QLTCDbModel.Wallet">
+        <MappingFragment StoreEntitySet="Wallet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FirstMoney" ColumnName="FirstMoney" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
